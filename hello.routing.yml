@@ -1,0 +1,23 @@
+hello.display:
+  path: '/hello'
+  defaults:
+    _title: 'Hello'
+    _content: '\Drupal\hello\Controller\HelloController::helloWorld'
+  requirements:
+    _permission: 'access content'
+
+hello.value:
+  path: '/hello/{value}'
+  defaults:
+    _title: 'Hello'
+    _content: '\Drupal\hello\Controller\HelloController::helloWorld2'
+  requirements:
+    _permission: 'access content'
+
+example.form:
+  path: '/form'
+  defaults:
+    _title: 'Example form'
+    _form: '\Drupal\hello\Form\HelloForm'
+  requirements:
+    _permission: 'access content'
