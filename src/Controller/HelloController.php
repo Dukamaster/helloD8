@@ -11,12 +11,9 @@ class HelloController{
     $build = array(
       '#markup' => t('The Block Example provides three sample blocks which demonstrate the various block APIs. To experiment with the blocks, enable and configure them on <a href="@url">the block admin page</a>.', array('@url' => url('admin/structure/block'))),
     );
-    $kv = Drupal::keyValue('hello');
-    $re = $kv->getAll();
-    var_dump($re);die();
-    // return $build;
+    return $build;
   }
-  public function helloWorld2($value) {
+  public function helloName($value) {
     $build = array(
       '#markup' => t("hello {$value}"),
     );

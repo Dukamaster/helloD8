@@ -10,7 +10,7 @@ hello.value:
   path: '/hello/{value}'
   defaults:
     _title: 'Hello'
-    _content: '\Drupal\hello\Controller\HelloController::helloWorld2'
+    _content: '\Drupal\hello\Controller\HelloController::helloName'
   requirements:
     _permission: 'access content'
 
@@ -21,3 +21,6 @@ example.form:
     _form: '\Drupal\hello\Form\HelloForm'
   requirements:
     _permission: 'access content'
+
+route_callbacks:
+    - Drupal\hello\Routing\HelloRoutes::getRoutes    
