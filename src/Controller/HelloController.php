@@ -19,4 +19,14 @@ class HelloController{
     );
     return $build;
   }
+
+  public function configLang() {
+    $original_language = Drupal::configFactory()->getLanguage();
+    var_dump($original_language);die();
+    $language = language_load($account->getPreferredLangcode());
+    Drupal::configFactory()->setLanguage($language);
+    $mail_config = Drupal::config('user.mail');
+
+    return $original_language;
+  }
 }

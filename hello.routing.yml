@@ -14,6 +14,23 @@ hello.value:
   requirements:
     _permission: 'access content'
 
+hello.configLang:
+  path: '/hello/config/show'
+  defaults:
+    _title: 'Config Language'
+    _content: '\Drupal\hello\Controller\HelloConfigController::showConfig'
+  requirements:
+    _permission: 'access content'
+
+
+hello.configLang:
+  path: '/hello/config/write'
+  defaults:
+    _title: 'Config Language'
+    _content: '\Drupal\hello\Controller\HelloConfigController::writeConfig'
+  requirements:
+    _permission: 'access content'
+
 example.form:
   path: '/form'
   defaults:
@@ -23,4 +40,12 @@ example.form:
     _permission: 'access content'
 
 route_callbacks:
-    - Drupal\hello\Routing\HelloRoutes::getRoutes    
+    - Drupal\hello\Routing\HelloRoutes::getRoutes
+
+hello.lang.form:
+  path: '/lang'
+  defaults:
+    _title: 'Find your language'
+    _form: '\Drupal\hello\Form\HelloLangForm'
+  requirements:
+    _permission: 'access content'

@@ -31,15 +31,8 @@ class HelloForm extends FormBase {
   }
 
   public function submitForm(array &$form, array &$form_state) {
-
-   //var_dump($form_state['values']['phone_number']);die;
-
-     $kv = Drupal::keyValue('hello');
-        $kv->set('phone', $form_state['values']['phone_number']);
-         //$a = $kv->get('name');
-
-     // $kv = Drupal::keyValue('hellotest');
-     // $kv->set('phone', $form_state['values']['phone_number']);
-     drupal_set_message($this->t('Success'));
+    $kv = Drupal::keyValue('hello');
+    $kv->set('phone', $form_state['values']['phone_number']);
+    drupal_set_message($this->t('Success'));
   }
 }
