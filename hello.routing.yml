@@ -42,10 +42,3 @@ example.form:
 route_callbacks:
     - Drupal\hello\Routing\HelloRoutes::getRoutes
 
-hello.lang.form:
-  path: '/lang'
-  defaults:
-    _title: 'Find your language'
-    _form: '\Drupal\hello\Form\HelloLangForm'
-  requirements:
-    _permission: 'access content'
